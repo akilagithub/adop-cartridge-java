@@ -387,10 +387,6 @@ performanceTestJob.with {
             |sed -i "s/###TOKEN_RESPONSE_TIME###/10000/g" ${WORKSPACE}/src/test/scala/default/RecordedSimulation.scala
             |'''.stripMargin()
         )
-        maven {
-            goals('gatling:execute')
-            mavenInstallation('ADOP Maven')
-        }
     }
     publishers {
         publishHtml {
